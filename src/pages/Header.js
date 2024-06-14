@@ -1,21 +1,59 @@
 import React from "react";
 import styled from "styled-components";
+// import { Container, Nav, Navbar } from "react-bootstrap";
 
-function Header() {
-  const HeadertWrapper = styled.span`
-    color: #111111;
+function Header(props) {
+  // const navigate = useNavigate();
+  const HeaderWrapper = styled.header`
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: 1px solid #eeeeee;
+  `;
+
+  const Logo = styled.div`
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+  `;
+
+  const Nav = styled.nav`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  `;
+
+  const NavLink = styled.a`
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+  `;
+
+  const Icons = styled.div`
+    display: flex;
+    align-items: center;
+  `;
+
+  const Icon = styled.span`
+    margin-left: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
   `;
   return (
-    <HeadertWrapper>
-      <div>
-        <span>카페모아모아</span>
-        <span>카페</span>
-        <span>무드</span>
-        <span>디저트</span>
-        <span>로그인</span>
-        <span>검색</span>
-      </div>
-    </HeadertWrapper>
+    <HeaderWrapper>
+      <Logo>CAFE MOAMOA</Logo>
+      <Nav>
+        <NavLink href="#coffee">Coffee</NavLink>
+        <NavLink href="#mood">Mood</NavLink>
+        <NavLink href="#dessert">Dessert</NavLink>
+      </Nav>
+      <Icons>
+        <Icon>👤</Icon>
+        <Icon>🔍</Icon>
+      </Icons>
+    </HeaderWrapper>
   );
 }
 
