@@ -6,7 +6,6 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { Overlay } from "react-bootstrap";
 
-// const image  = ["./"]
 // main에 필요한것들 : 슬라이드/사진들/
 const MainWrapper = styled.div`
   width: 100%;
