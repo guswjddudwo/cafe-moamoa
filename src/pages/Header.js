@@ -20,6 +20,7 @@ function Header(props) {
     font-size: 1.5em;
     font-weight: bold;
     color: #111111;
+    cursor: pointer;
   `;
 
   const Nav = styled.nav`
@@ -28,16 +29,24 @@ function Header(props) {
   `;
 
   const NavLink = styled.a`
-    padding: 0 41px;
+    margin: 0 41px;
+    padding: 2px 5px;
     text-decoration: none;
     color: #111111;
     font-size: 1.2em;
+    display: inline-block;
+
+    &:hover {
+      background-color: #f4f6fa;
+      border-radius: 15%;
+    }
   `;
 
   const Icons = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
   `;
 
   return (
