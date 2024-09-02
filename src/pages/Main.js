@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import { Reset } from "styled-reset";
-import { ThemeProvider } from "styled-components";
 import images from "../utils/importImages";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbArrowNarrowRight } from "react-icons/tb";
-import { Overlay } from "react-bootstrap"; // 모달창 라이브러리
 import Slider from "../components/Slider";
 
 const MainWrapper = styled.div`
@@ -13,13 +10,11 @@ const MainWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   margin-top: 140px;
-  align-items: center;
 `;
 
 const ContentWrapper = styled.div`
   width: 80%;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -32,7 +27,6 @@ const LocationText = styled.span`
 `;
 
 const HeaderText = styled.div`
-  /* width: auto; */
   margin-left: 80px;
   display: flex;
   align-items: center;
@@ -71,6 +65,9 @@ const ViewAllButton = styled.div`
   }
 `;
 const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 1192px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,8 +76,10 @@ const ImageContainer = styled.div`
   position: relative;
   width: 381px;
   height: 282px;
-  margin-left: 24px;
   transition: transform 0.3s ease;
+  &:nth-child(2) {
+    margin: 0 24px;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -141,7 +140,6 @@ function Main(props) {
       <Slider />
 
       {/* 몸통 */}
-      <section></section>
     </MainWrapper>
   );
 }

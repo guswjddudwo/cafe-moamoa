@@ -8,9 +8,10 @@ import "swiper/css/autoplay";
 import images from "../utils/importImages";
 
 const SwiperWrapper = styled.div`
-  width: 1200px;
+  width: 100%;
+  max-width: 1192px;
   height: 260px;
-  margin: 3% auto;
+  margin: 24px auto 0;
   background-color: #fff4f2;
 
   /* pagination 스타일링 */
@@ -28,10 +29,6 @@ const SwiperWrapper = styled.div`
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
   display: flex;
   justify-content: space-between;
 `;
@@ -78,10 +75,10 @@ const Slider = () => {
       <Swiper
         modules={[Pagination, Autoplay]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        spaceBetween={20}
+        // spaceBetween={20}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        speed={810}
+        speed={850}
       >
         <StyledSwiperSlide>
           <SlideTextWrapper>
