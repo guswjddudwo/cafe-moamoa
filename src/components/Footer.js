@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 313px;
   background-color: #111111;
+  margin-top: 120px;
 `;
 
 const Text = styled.span`
