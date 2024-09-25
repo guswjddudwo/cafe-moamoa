@@ -3,10 +3,10 @@ import images from "../utils/importImages";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Slider from "../components/Slider";
+import InfoCard from "../components/InfoCard";
 
 const MainWrapper = styled.div`
   width: 100%;
-  max-width: 1920px;
   position: relative;
   margin: 0 auto;
   margin-top: 140px;
@@ -28,6 +28,7 @@ const LocationText = styled.span`
 
 const HeaderText = styled.div`
   margin-left: 80px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -85,7 +86,6 @@ const ImageContainer = styled.div`
 const StyledImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
 `;
 
 const OverlayText = styled.div`
@@ -115,7 +115,12 @@ function Main(props) {
           <DescriptionText>커피 맛집을 모아모아.</DescriptionText>
           <ViewAllButton>
             전체보기
-            <TbArrowNarrowRight color="#111111" size="2rem" />
+            <TbArrowNarrowRight
+              color="#111111"
+              size="2rem"
+              style={{ cursor: "pointer", transition: "color 0.3s ease" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#5d5d5d")}
+            />
           </ViewAllButton>
         </DescriptionGroup>
       </ContentWrapper>
@@ -140,6 +145,7 @@ function Main(props) {
       <Slider />
 
       {/* 몸통 */}
+      <InfoCard />
     </MainWrapper>
   );
 }

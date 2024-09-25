@@ -1,13 +1,18 @@
 import { createGlobalStyle } from "styled-components";
-import { Reset } from "styled-reset";
-// import { ThemeProvider } from "styled-components";
+import reset from "styled-reset";
 // import { Route, Routes } from "react-router-dom";
 
 import Header from "./pages/Header";
 import Main from "./pages/Main";
+import Review from "./pages/Review";
+import Footer from "./components/Footer";
 const GlobalStyle = createGlobalStyle`
+  ${reset}
+
 /* 글로벌(공통) 스타일 */
 body {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -18,22 +23,18 @@ body {
   * {
     box-sizing: inherit;
   }
-
-  .cursor-pointer {
-    cursor: pointer;
-  }
 `;
 
 function App() {
   return (
-    <div>
-      {/* <ThemeProvider>
-        <GlobalStyle />
-      </ThemeProvider> */}
+    <>
+      <GlobalStyle />
 
       <Header />
       <Main />
-    </div>
+      <Review />
+      <Footer />
+    </>
   );
 }
 
