@@ -1,6 +1,6 @@
 import { colors } from "ions";
 import Styled, { styled } from "styled-components";
-import { SiInstagram } from "react-icons/si";
+import { BiLogoInstagramAlt } from "react-icons/bi";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -11,13 +11,15 @@ const Wrapper = styled.div`
 
 const Text = styled.span`
   color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
 `;
 function Footer() {
   return (
     <div>
       <Wrapper>
         <Text>CAFE MOAMOA</Text>
-        <SiInstagram size="2rem" color="#ffff" />
+        <BiLogoInstagramAlt size="2rem" color="#ffff" />
       </Wrapper>
     </div>
   );

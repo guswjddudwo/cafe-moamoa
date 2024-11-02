@@ -7,19 +7,19 @@ const Container = styled.div`
   width: 100%;
   /* max-width: 1920px; // 필요 없음 자식컨텐츠를 넣을때 씀 */
   margin: 0 auto;
+  margin-top: 160px;
 `;
 
 const StyledCard = styled.div`
   width: 100%;
   /* background-color: aqua; */
-  margin-top: 60px;
   display: flex;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 `;
 
 const MainImage = styled.img`
-  width: 790px;
-  height: 820px;
+  width: 830px;
+  height: 880px;
 `;
 
 const DetailsWrapper = styled.div`

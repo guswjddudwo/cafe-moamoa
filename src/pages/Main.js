@@ -4,6 +4,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Slider from "../components/Slider";
 import InfoCard from "../components/InfoCard";
+import Review from "./Review";
+import Footer from "../components/Footer";
 
 const MainWrapper = styled.div`
   width: 100%;
@@ -146,6 +148,8 @@ function Main(props) {
 
       {/* 몸통 */}
       <InfoCard />
+      <Review />
+      <Footer />
     </MainWrapper>
   );
 }
