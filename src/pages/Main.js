@@ -3,7 +3,7 @@ import images from "../utils/importImages";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import Slider from "../components/Slider";
-import InfoCard from "../components/InfoCard";
+import InfoCard from "./InfoCard";
 import Review from "./Review";
 import Footer from "../components/Footer";
 

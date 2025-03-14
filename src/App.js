@@ -1,39 +1,29 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Header from "./pages/Header";
+import Header from "./components/Header";
 import Main from "./pages/Main";
-import Signin from "./components/login/Signin";
+import Signin from "./features/login/Signin";
+import { useState } from "react";
+import ProductRegisterPage from "./pages/form/ProductRegister";
 
-const GlobalStyle = createGlobalStyle`
-  ${reset}
+function App({ onLoginSuccess }) {
+  const [userName, setUserName] = useState("");
 
-  /* 글로벌(공통) 스타일 */
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  #root {
-    text-align: center;
-  }
-
-  * {
-    box-sizing: inherit;
-  }
-`;
-
-function App() {
+  const handleLoginSuccess = (name) => {
+    setUserName(name);
+  };
   return (
     <>
-      <GlobalStyle />
       <BrowserRouter>
-        <Header />
+        <Header userName={userName} />
         <Routes>
-          <Route path="/signin" element={<Signin />} />
+          <Route
+            path="/signin"
+            element={<Signin onLoginSuccess={handleLoginSuccess} />}
+          />
           <Route path="/" element={<Main />} />
+          <Route path="form" element={<ProductRegisterPage />} />
         </Routes>
       </BrowserRouter>
     </>
